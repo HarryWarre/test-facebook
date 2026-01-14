@@ -1,27 +1,37 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<script>
-	window.fbAsyncInit = function () {
-		window.FB?.init({
-			appId: '154903255279282',
-			autoLogAppEvents: true,
-			xfbml: true,
-			version: 'v2.11'
-		});
-	};
+<html lang="vi">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Facebook Messenger Chat</title>
+	</head>
 
-	(function (d, s, id) {
-		var js,
-			fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) {
-			return;
-		}
-		js = d.createElement(s);
-		js.id = id;
-		js.src = 'https://connect.facebook.net/vi_VN/sdk.js';
-		fjs.parentNode?.insertBefore(js, fjs);
-	})(document, 'script', 'facebook-jssdk');
-</script>
-<html lang="en">
-	<div class="fb-messengermessageus" messenger_app_id="154903255279282" page_id="61586486643274" color="blue" size="standard"></div>
+	<body>
+		<!-- REQUIRED -->
+		<div id="fb-root"></div>
+
+		<!-- Messenger Button -->
+		<div class="fb-messengermessageus" messenger_app_id="154903255279282" page_id="61586486643274" color="blue" size="standard"></div>
+
+		<!-- Facebook SDK -->
+		<script>
+			window.fbAsyncInit = function () {
+				FB.init({
+					appId: '154903255279282',
+					autoLogAppEvents: true,
+					xfbml: true,
+					version: 'v18.0'
+				});
+			};
+
+			(function (d, s, id) {
+				var js,
+					fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s);
+				js.id = id;
+				js.src = 'https://connect.facebook.net/vi_VN/sdk.js';
+				fjs.parentNode.insertBefore(js, fjs);
+			})(document, 'script', 'facebook-jssdk');
+		</script>
+	</body>
 </html>
